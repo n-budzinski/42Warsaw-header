@@ -1,26 +1,78 @@
-let s:asciiart2 = [
-			\"        :::     :::::::: ",
-			\"      :+:     :+:    :+: ",
-			\"    +:+ +:+        +:+   ",
-			\"  +#+  +:+      +#+      ",
-			\"+#+#+#+#+#+  +#+         ",
-			\"     #+#   #+#           ",
-			\"    ###  #######warsaw.pl"]
-
-let s:asciiart = [
+let s:asciiart = [[
+\"        :::     :::::::: ",
+\"      :+:     :+:    :+: ",
+\"    +:+ +:+        +:+   ",
+\"  +#+  +:+      +#+      ",
+\"+#+#+#+#+#+  +#+         ",
+\"     #+#   #+#           ",
+\"    ###  #######Warsaw.pl"],[
 \"                                                      ",
 \" ▄█▀· ·▄▄▄▄•   ▄▄▌ ▐ ▄▌ ▄▄▄  ▄▄▄  .▄▄ ·  ▄▄▄· ▄▄▌ ▐ ▄▌",
 \"▐█  ▄ ▪▀·.█▌   ██· █▌▐█▐█ ▀█ ▀▄ █·▐█ ▀. ▐█ ▀█ ██  █▌▐█",
 \".▀▀▀█ ▄█▀▀▀•   ██ ▐█▐▐▌▄█▀▀█ ▐▀▀▄ ▄▀▀▀█▄▄█▀▀█ ██▪▐█▐▐▌",
 \"·  ▪▐▌█▌▪▄█▀   ▐█▌██▐█▌▐█ ▪▐▌▐█•█▌▐█▄▪▐█▐█  ▐▌▐█▌██▐█▌",
 \"   ·▀ ·▀▀▀ •    ▀▀▀▀ ▀▪ ▀  ▀ .▀  ▀ ▀▀▀▀  ▀  ▀  ▀▀▀▀ ▀ ",
-\"                                                      "]
+\"                                                      "],[
+\"░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░",
+\"░   ░▒▒▒▒▒░░░▒░░ ░░░░░░░░░░▒▓████████████▓▓░░▒▒░░░░░░░░░░▓░░░░░░░░░░░░░░░░",
+\" ▒▓▓▓▓▓█████▓░  ░ ░░░▒░░░░▒████████████████▓░░░▒░░░▒░░░░░░░░▒░░░░░░░░░░░░░",
+\"▓█▓▓███▓▓▒░        ▒███░▓▓▓▓███████████████▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░",
+\"▒████▒░      ▒▒▓▓▓▒▒███▓▒▒░░░░░▒▓▓█████▓▒▒░▒▒▓▒ ░░░▒░░░░░░░░░░░░░░░░░░░░░░",
+\"▒▓█▓░     ░▓█▒▒▓████▒▒█▓▒▒░ ░░▒███▓▓▓▓▓███░▒▒▓███▒░░ ░░░░░░░░░░░░░░░░░░░░░",
+\"▒▓▒░    ░░██▒▒█▓█▓███▓▒▓▒     ░█▒██████▓░ ░░▒██▒▓█▓░  ░░░░░░░░░░░░░░░░░░░░",
+\"▓▒░    ░░░  ░▒▒█▓▒▒▒▒▒▒▒░     ▒ ▒▒░▓██▓ ░░ ░▒████▒█▒     ░░░░░░░░░░░▒░░░░░",
+\"▒▒░    ░   ▒██░▒▒▒▒▒▒▒▒▒▒     ░█▒▒▓█▓ ▒▓█░ ░░▓███▒█████▓░  ░░░░░░░░░░░░░░░",
+\"▒░      ░▓▓███▓░▒▒▒▒▒▒▒▒▓░     ▒█▓██░░█▒   ▒░  ░▒▒▓██████▓▒░░░░░░░░░░░░░░░",
+\" ░░   ▒░▓▓▓▓▓▓▓ ░░ ░▒▒░░▒▓       ▓████▓   ░▒░ ░▒▒▒     ░░░▒▓▒ ░░░░░░░░░░░░",
+\"     ░▒▓▓▓▓▓▓▓▒  ░  ░░  ░▒▓▓     ▒▓▓▓▓▒  ░▓░ ░░▒▒░                        ",
+\"     ▒▒▒▓▓▓▓▓▓▒▒         ░░▒▓▓░   ▒░▒░ ░▒▓░  ░[It's not over, moulinette!]",
+\"   ░ ▒▒▒▒▒▒▒▒░▒▒ ░          ░░▓▓▓▒▒▒▒▓▓▒▒                     42Warsaw.pl "],[
+\"                              ░░     ▒▒                   ░▒      ",
+\"                        ▒       ▒▓▒░         ▒████▒▒            ░░",
+\"                          ▒█▓░            ▓███████████░           ",
+\"         ▓█▓   ▓███████░      ▓█░       ▒████████████▒▒▓░       ░░",
+\"       ▓███▓  ██▓░  ░███   ▒▒░          ██████████████▒▒█▓        ",
+\"     ▓▓░░▓█  ██░     ██▓       ▒▒      ▒▒ ░███ ░▒▒███▓▒░██     ▓█▓",
+\"   ▓█░ ░▓█   █▓    ▓██▓    ░           ███ ▒█▓ ██▓███▒▒▒██▒       ",
+\" ▓█████████▓      ▓██            ░     ▒▒░▒  ▓▓░▓████▒▒▓██        ",
+\"      ██        ▓██▓       ░░░         ██▓░ ░▒▓▓█████▒ ▒█         ",
+\"     ██      ▓███▓                      ░▓░▓▓███      ░       ░░  ",
+\"    ██▓   ░▓███████████        ▓▓▒       ▒▒   ░    ▒░             ",
+\"   ▓█▓    ▓████████ Warsaw.pl   ░▒       ▒█          ▒▒░          ",
+\"                                ░▒░       ▒▓▒▒▒███▓░              ",
+\"                                      ░░   ░███▓▒                 "],[
+\"                                          ▒████████▓░               ",
+\"                                        ▓████████████▓░             ",
+\"                                       ░██████████████▓             ",
+\"                                       ▒▓▓▓▓████████▓▒▒             ",
+\"                                        ▓▒▒░ ▒▓▓▒░ ░▓░▒             ",
+\"                                        ▒▒░▒░ ▓▓░ ░▒▒█              ",
+\"                                        ▒▓▒░▓▓  ▓█▒▒▓█░             ",
+\"                                         ▒▒▓█░   ▓▓▒▓░              ",
+\"                       ░   Happy coding!  ▒ ▓█▒▒▓▓▓░░               ",
+\"                       ░                  ▓▓░▒▒▓▓░▒▓▒               ",
+\"                       ▒    ░              ▓▓▒▒▒▒▒█▓                ",
+\"                      ░░   ░                ▓██▓▓█▓                 ",
+\"                   ▒ ▒▒ ▒                    ▓▒▒▒▒▒                 ",
+\"                   ░░░ ░                    ▓▒░░░▒▓░                ",
+\"                   ▒▓▒▒▒░    ░░▓▒▓▒▒▒    ░▓▒░▒░▒▓▒▒▒▓▒     ▒▒▒▓▒▓░░ ",
+\"                   ░▓▒░     ▓█▓▒░▒▓▒░ ░▓▒░   ▒░░▒▒░   ▒▓▓░ ░▒▓██▓██▒",
+\"                 ▒▒▒▓░      ▒▓█▒▓▓▓▓█░▒░ ░░░▒░▒▒▒▓▒░░▓░░░▓▒█▒▒▓█░▓▓░",
+\"                ▒░▓░      ▓▓▒  ░▒░▓▒▓▓▒▓░▒░░░░█▓▓█░░░░░░█▒▓▒▓▓▓▓ ░▓▓",
+\" 42Warsaw.pl  ░▓░▓     ░▒▓      ▓▓▒▒▒▓  ▓▓▓░░▒▓▓▒▒▒▒▓░ ░▒▓▒▒▓▒  ░▓░ "]]
+
+let s:left_margin = [26, 11, 1, 4, 4]
+let s:right_margin = [25, 11, 1, 6, 4]
+let s:lines = [6, 6, 13, 13, 18]
+
 
 let s:start		= '/*'
 let s:end		= '*/'
 let s:fill		= '*'
 let s:length	= 80
 let s:margin	= 5
+let s:rnd = rand() % 5
+let s:rnd = 0
 
 let s:types		= {
 			\'\.c$\|\.h$\|\.cc$\|\.hh$\|\.cpp$\|\.hpp$\|\.php':
@@ -59,7 +111,7 @@ function! s:filetype()
 endfunction
 
 function! s:ascii(n)
-	return s:asciiart[a:n - 3]
+	return s:asciiart[s:rnd][a:n - 3]
 endfunction
 
 function! s:textline(left, right)
@@ -69,21 +121,21 @@ function! s:textline(left, right)
 endfunction
 
 function! s:line(n)
-	if a:n == 1 || a:n == 17 " top and bottom line
+	if a:n == 1 || a:n == 12 + s:lines[s:rnd] " top and bottom line
 		return s:start . ' ' . repeat(s:fill, s:length - strlen(s:start) - strlen(s:end) - 2) . ' ' . s:end
-	elseif a:n == 2 || a:n == 16 " blank line
+	elseif a:n == 2 || a:n == 11 + s:lines[s:rnd] " blank line
 		return s:textline('', '')
-	elseif a:n >= 3 && a:n <= 8 " blank line
-		return s:start . repeat(' ', 11) . s:ascii(a:n) . repeat(' ', 11) . s:end
-	elseif a:n == 9 || a:n == 11 || a:n == 13 " empty with ascii
+	elseif a:n >= 3 && a:n <= 3 + s:lines[s:rnd] " blank line
+		return s:start . repeat(' ', s:left_margin[s:rnd]) . s:ascii(a:n) . repeat(' ', s:right_margin[s:rnd]) . s:end
+	elseif a:n == 4 + s:lines[s:rnd] || a:n == 6 + s:lines[s:rnd] || a:n == 8 + s:lines[s:rnd] " empty with ascii
 		return s:textline('', '')
-	elseif a:n == 10 " filename
+	elseif a:n == 5 + s:lines[s:rnd] " filename
 		return s:textline(s:filename(), '')
-	elseif a:n == 12 " author
+	elseif a:n == 7 + s:lines[s:rnd] " author
 		return s:textline("By: " . s:user() . " <" . s:mail() . ">", '')
-	elseif a:n == 14 " created
+	elseif a:n == 9 + s:lines[s:rnd] " created
 		return s:textline("Created: " . s:date() . " by " . s:user(), '')
-	elseif a:n == 15 " updated
+	elseif a:n == 10 + s:lines[s:rnd] " updated
 		return s:textline("Updated: " . s:date() . " by " . s:user(), '')
 	endif
 endfunction
@@ -123,7 +175,7 @@ function! s:date()
 endfunction
 
 function! s:insert()
-	let l:line = 16
+	let l:line = 12 + s:lines[s:rnd]
 
 	" empty line after header
 	call append(0, "")
@@ -137,9 +189,10 @@ endfunction
 
 function! s:update()
 	call s:filetype()
-	if getline(15) =~ s:start . repeat(' ', s:margin - strlen(s:start)) . "Updated: "
+	let line = 10 + s:lines[s:rnd]
+	if getline(line) =~ s:start . repeat(' ', s:margin - strlen(s:start)) . "Updated: "
 		if &mod
-			call setline(15, s:line(15))
+			call setline(line, s:line(line))
 		endif
 		call setline(4, s:line(4))
 		return 0
