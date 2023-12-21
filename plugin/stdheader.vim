@@ -93,7 +93,6 @@ let s:fill		= '*'
 let s:length	= 80
 let s:margin	= 5
 let s:rnd = rand() % len(s:asciiart)
-let s:rnd = 2
 
 let s:types		= {
 			\'\.c$\|\.h$\|\.cc$\|\.hh$\|\.cpp$\|\.hpp$\|\.php':
