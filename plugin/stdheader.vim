@@ -1,4 +1,4 @@
-let s:asciiart = [
+let s:asciiart2 = [
 			\"        :::     :::::::: ",
 			\"      :+:     :+:    :+: ",
 			\"    +:+ +:+        +:+   ",
@@ -6,6 +6,15 @@ let s:asciiart = [
 			\"+#+#+#+#+#+  +#+         ",
 			\"     #+#   #+#           ",
 			\"    ###  #######warsaw.pl"]
+
+let s:asciiart = [
+\"                                                      ",
+\" ▄█▀· ·▄▄▄▄•   ▄▄▌ ▐ ▄▌ ▄▄▄  ▄▄▄  .▄▄ ·  ▄▄▄· ▄▄▌ ▐ ▄▌",
+\"▐█  ▄ ▪▀·.█▌   ██· █▌▐█▐█ ▀█ ▀▄ █·▐█ ▀. ▐█ ▀█ ██  █▌▐█",
+\".▀▀▀█ ▄█▀▀▀•   ██ ▐█▐▐▌▄█▀▀█ ▐▀▀▄ ▄▀▀▀█▄▄█▀▀█ ██▪▐█▐▐▌",
+\"·  ▪▐▌█▌▪▄█▀   ▐█▌██▐█▌▐█ ▪▐▌▐█•█▌▐█▄▪▐█▐█  ▐▌▐█▌██▐█▌",
+\"   ·▀ ·▀▀▀ •    ▀▀▀▀ ▀▪ ▀  ▀ .▀  ▀ ▀▀▀▀  ▀  ▀  ▀▀▀▀ ▀ ",
+\"                                                      "]
 
 let s:start		= '/*'
 let s:end		= '*/'
@@ -60,20 +69,22 @@ function! s:textline(left, right)
 endfunction
 
 function! s:line(n)
-	if a:n == 1 || a:n == 11 " top and bottom line
+	if a:n == 1 || a:n == 17 " top and bottom line
 		return s:start . ' ' . repeat(s:fill, s:length - strlen(s:start) - strlen(s:end) - 2) . ' ' . s:end
-	elseif a:n == 2 || a:n == 10 " blank line
+	elseif a:n == 2 || a:n == 16 " blank line
 		return s:textline('', '')
-	elseif a:n == 3 || a:n == 5 || a:n == 7 " empty with ascii
-		return s:textline('', s:ascii(a:n))
-	elseif a:n == 4 " filename
-		return s:textline(s:filename(), s:ascii(a:n))
-	elseif a:n == 6 " author
-		return s:textline("By: " . s:user() . " <" . s:mail() . ">", s:ascii(a:n))
-	elseif a:n == 8 " created
-		return s:textline("Created: " . s:date() . " by " . s:user(), s:ascii(a:n))
-	elseif a:n == 9 " updated
-		return s:textline("Updated: " . s:date() . " by " . s:user(), s:ascii(a:n))
+	elseif a:n >= 3 && a:n <= 8 " blank line
+		return s:start . repeat(' ', 11) . s:ascii(a:n) . repeat(' ', 11) . s:end
+	elseif a:n == 9 || a:n == 11 || a:n == 13 " empty with ascii
+		return s:textline('', '')
+	elseif a:n == 10 " filename
+		return s:textline(s:filename(), '')
+	elseif a:n == 12 " author
+		return s:textline("By: " . s:user() . " <" . s:mail() . ">", '')
+	elseif a:n == 14 " created
+		return s:textline("Created: " . s:date() . " by " . s:user(), '')
+	elseif a:n == 15 " updated
+		return s:textline("Updated: " . s:date() . " by " . s:user(), '')
 	endif
 endfunction
 
@@ -112,7 +123,7 @@ function! s:date()
 endfunction
 
 function! s:insert()
-	let l:line = 11
+	let l:line = 16
 
 	" empty line after header
 	call append(0, "")
@@ -126,9 +137,9 @@ endfunction
 
 function! s:update()
 	call s:filetype()
-	if getline(9) =~ s:start . repeat(' ', s:margin - strlen(s:start)) . "Updated: "
+	if getline(15) =~ s:start . repeat(' ', s:margin - strlen(s:start)) . "Updated: "
 		if &mod
-			call setline(9, s:line(9))
+			call setline(15, s:line(15))
 		endif
 		call setline(4, s:line(4))
 		return 0

@@ -6,7 +6,7 @@
 
 42Warsaw header for vim editor.
 
-![42 header](img/42header.jpg)
+![42 header](img/42header.png)
 
 ### **UNIX Setup**
 
