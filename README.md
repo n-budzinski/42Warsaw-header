@@ -1,10 +1,10 @@
-# **42 Header**
+# **42Warsaw Header**
 
 42 (Warsaw)
 
 ### **Description**
 
-42Warsaw header for vim editor.
+A modified 42Warsaw header for vim editor. Seems to comply with the norminette. Use at your own risk.
 
 ![42 header](img/42header.png)
 
