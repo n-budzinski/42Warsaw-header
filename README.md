@@ -4,7 +4,7 @@
 
 ### **Description**
 
-A modified 42Warsaw header for vim editor. Seems to comply with the norminette. Use at your own risk.
+A modified 42Warsaw header for vim editor. Use at your own risk.
 
 ![42 header](img/42header.png)
 
@@ -20,11 +20,13 @@ Add in `~/.zshrc` your:
 + `USER`
 + `MAIL`
 
+Use 'source ~/.zshrc' to apply changes
+
 #### Option 2: set user and mail values directly in your vimrc
 
 ```vim
 let g:user42 = 'yourLogin'
-let g:mail42 = 'yourLogin@student.42.fr'
+let g:mail42 = 'yourLogin@student.42warsaw.pl'
 ```
 
 ### **Usage**
