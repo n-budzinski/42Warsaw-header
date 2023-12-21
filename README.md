@@ -1,10 +1,10 @@
 # **42 Header**
 
-42 (Paris)
+42 (Warsaw)
 
 ### **Description**
 
-42 standard header for vim editor.
+42Warsaw header for vim editor.
 
 ![42 header](img/42header.jpg)
 
